@@ -14,3 +14,52 @@ def menu():
 cont = True
 placar_user = 0
 placar_cpu = 0
+
+while cont:
+    menu()
+
+    print(f'Placar YOU {placar_user} X {placar_cpu} CPU ')
+
+    option_jokenpo = ['Pedra', 'Papel', 'Tesoura'] 
+    cpu_select = random.choice(option_jokenpo) # CPU escolhe 
+
+    user_select = int(input(''))
+
+    if user_select == 1:
+        
+        user_select = 'Pedra'
+        
+        if user_select == cpu_select: # Pedra == Pedra
+            os.system('cls')
+            print('CARREGANDO...')
+            time.sleep(1)
+            os.system('cls')
+            print('EMPATE!!')
+            print('=======================')
+            print(f'YOU: {user_select.upper()}')
+            print(f'CPU: {cpu_select.upper()}')
+            time.sleep(3)
+        
+        elif cpu_select == 'Papel': # Pedra == Papel
+            os.system('cls')
+            print('CARREGANDO...')
+            time.sleep(1)
+            os.system('cls')
+            print('VOCÊ PERDEU!!')
+            print('=======================')
+            print(f'YOU: {user_select.upper()}')
+            print(f'CPU: {cpu_select.upper()}')
+            time.sleep(3)
+            placar_cpu += 1
+        
+        elif cpu_select == 'Tesoura': # Pedra == Tesoura
+            os.system('cls')
+            print('CARREGANDO...')
+            time.sleep(3)
+            os.system('cls')
+            print('VOCÊ GANHOU!!')
+            print('=======================')
+            print(f'YOU: {user_select.upper()}')
+            print(f'CPU: {cpu_select.upper()}')
+            time.sleep(3)
+            placar_user += 1
