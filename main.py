@@ -63,7 +63,7 @@ while cont:
             print(f'CPU: {cpu_select.upper()}')
             time.sleep(3)
             placar_user += 1
-            
+
     elif user_select == 2:
 
         user_select = 'Papel'
@@ -102,3 +102,49 @@ while cont:
             print(f'CPU: {cpu_select.upper()}')
             time.sleep(3)
             placar_cpu += 1
+
+    elif user_select == 3:
+        
+        user_select = 'Tesoura'
+
+        if user_select == cpu_select: # Tesoura == Tesoura
+            os.system('cls')
+            print('CARREGANDO...')
+            time.sleep(1)
+            os.system('cls')
+            print('EMPATE!!')
+            print('=======================')
+            print(f'YOU: {user_select.upper()}')
+            print(f'CPU: {cpu_select.upper()}')
+            time.sleep(3)
+        
+        elif cpu_select == 'Pedra': # Tesoura == Pedra
+            os.system('cls')
+            print('CARREGANDO...')
+            time.sleep(1)
+            os.system('cls')
+            print('VOCÊ PERDEU!!')
+            print('=======================')
+            print(f'YOU: {user_select.upper()}')
+            print(f'CPU: {cpu_select.upper()}')
+            time.sleep(3)
+            placar_cpu += 1
+        
+        elif cpu_select == 'Papel': # Tesoura == Papel
+            os.system('cls')
+            print('CARREGANDO...')
+            time.sleep(1)
+            os.system('cls')
+            print('VOCÊ GANHOU!!')
+            print('=======================')
+            print(f'YOU: {user_select.upper()}')
+            print(f'CPU: {cpu_select.upper()}')
+            time.sleep(3)
+            placar_user += 1
+        
+    elif user_select == 4:
+        cont = False
+        os.system('cls')
+        print('CARREGANDO...')
+        time.sleep(1)
+        print('\nAté Mais!!')
